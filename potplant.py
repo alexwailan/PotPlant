@@ -9,15 +9,10 @@ import argparse
 import subprocess
 import numpy as np
 from pathlib import Path
-
-try:
-	import dendropy
-except:
-	print("Unable to import dendropy")
-	sys.exit()
+import dendropy
 
 
-print("You are cleared for dependencies mate. \n")	 
+print("You are cleared for dependencies mate. \n")
 
 
 ##########################################
@@ -89,7 +84,7 @@ if 'root' in locals(): #If root was defined by the user - root the tree
 		print('Rooting complete. \n')
 	except AttributeError:
 		print("Outgroup stated cannot be found.")
-		
+
 
 # Collapse the internal edges which are zero.
 print('Preparing your sapling by collapsing branches. \n')
