@@ -53,7 +53,8 @@ pdir = args.pdir
 odir = args.odir
 
 #read in tree
-tree_p = open(str(pdir+args.tree), "r").read()
+tree_p = str(pdir+args.tree)
+
 tree = dendropy.Tree.get(
     path=tree_p,
     schema='newick')
